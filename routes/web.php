@@ -1,12 +1,9 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-<<<<<<< HEAD
-use App\Http\Controllers\TaskController;
-=======
-use App\Http\Controllers\TaskController; // ← AJOUTEZ CETTE LIGNE
+use App\Http\Controllers\TaskController;// ← AJOUTEZ CETTE LIGNE
 
->>>>>>> feature/auth
+
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
