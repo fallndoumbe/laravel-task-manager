@@ -20,4 +20,11 @@ class Task extends Model
     {
         return $this->belongsTo(User::class);
     }
+<<<<<<< HEAD
+=======
+    public function tasks()
+{
+    return $this->hasMany(Task::class);
+}
+>>>>>>> feature/auth
 }
