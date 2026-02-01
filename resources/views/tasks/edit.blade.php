@@ -41,12 +41,6 @@
 
                         <div class="flex items-center justify-between mt-6">
                             <div>
-                                <x-secondary-link :href="route('tasks.index')">
-                                    ↩️ Annuler
-                                </x-secondary-link>
-                                <x-secondary-link :href="route('tasks.show', $task)" class="ms-3">
-                                    👁️ Voir les détails
-                                </x-secondary-link>
                                 <a href="{{ route('tasks.index') }}"
                                    class="inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out duration-150">
                                     ↩️ Annuler
@@ -74,13 +68,9 @@
                               onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer cette tâche ? Cette action est irréversible.')">
                             @csrf
                             @method('DELETE')
-                            <x-danger-button type="submit">
-                                🗑️ Supprimer cette tâche
-                            </x-danger-button>
                             <button type="submit" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm bg-red-600 hover:bg-red-700 text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
                                 🗑️ Supprimer cette tâche
                             </button>
-                            </button> feature/auth
                         </form>
                     </div>
                 </div>
