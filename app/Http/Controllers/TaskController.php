@@ -24,7 +24,6 @@ class TaskController extends Controller
     {
         return view('tasks.create');
     }
-
     /**
      * Store a newly created resource in storage.
      */
@@ -44,36 +43,39 @@ class TaskController extends Controller
 
         return redirect()->route('tasks.index')->with('success', 'Tâche créée avec succès!');
     }
-
+        // Protection simple sans Policy
     /**
      * Display the specified resource.
      */
     public function show(Task $task)
     {
+
         if ($task->user_id !== Auth::id()) {
             abort(403, 'Accès non autorisé');
         }
         return view('tasks.show', compact('task'));
     }
-
+        // Protection simple sans Policy
     /**
      * Show the form for editing the specified resource.
      */
     public function edit(Task $task)
     {
+
         // Protection simple sans Policy
+
         if ($task->user_id !== Auth::id()) {
             abort(403, 'Accès non autorisé');
         }
         return view('tasks.edit', compact('task'));
     }
-
     /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, Task $task)
     {
         // Protection simple sans Policy
+
         if ($task->user_id !== Auth::id()) {
             abort(403, 'Accès non autorisé');
         }
@@ -88,7 +90,7 @@ class TaskController extends Controller
 
         return redirect()->route('tasks.index')->with('success', 'Tâche mise à jour!');
     }
-
+        // Protection simple sans Policy
     /**
      * Remove the specified resource from storage.
      */
@@ -101,7 +103,6 @@ class TaskController extends Controller
         $task->delete();
         return redirect()->route('tasks.index')->with('success', 'Tâche supprimée!');
     }
-
     /**
      * Toggle task completion status
      */

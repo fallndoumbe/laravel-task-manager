@@ -62,6 +62,7 @@
                             <span class="mt-2 px-3 py-1 inline-flex text-sm leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">
                                 ⏳ Tâche en cours
                             </span>
+                            </span>feature/auth
                         @endif
                     </div>
 
