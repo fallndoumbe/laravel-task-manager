@@ -425,7 +425,7 @@
                                 <div class="action-buttons">
                                     <!-- Terminer/Refaire -->
                                     <div class="action-item">
-                                        <form action="{{ route('tasks.toggle', $task) }}" method="POST">
+                                        <form action="{{ route('tasks.toggleComplete', $task) }}" method="POST">
                                             @csrf
                                             @method('PATCH')
                                             <button type="submit" class="action-btn {{ $task->completed ? 'btn-redo' : 'btn-complete' }}">
